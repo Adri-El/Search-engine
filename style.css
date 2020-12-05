@@ -1,0 +1,146 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+@media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 31.5em) {
+    html {
+      font-size: 40%;
+    }
+}
+
+
+p{
+    font-size: 2rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    height: 50vh;
+    width: 100%;
+
+}
+@media only screen and (max-width: 37.5em) {
+    main {
+      padding: 0;
+    }
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Fugaz One', sans-serif;
+}
+
+.heading__char{
+    position: relative;
+    display: inline-block;
+    color: purple;
+}
+
+.heading__char::before{
+    content: attr(attribute);
+    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    overflow: hidden; 
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.search__input{
+   
+    width: 50vw;
+    height: 6rem;
+    border-radius: 3rem;
+    font-size: 3rem;
+    border: .2px solid black;
+    padding: 2rem;
+    padding-left: 8rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .search__input {
+      width: 90vw;
+    }
+}
+
+.search__input:focus{
+    outline: none;
+}
+
+.search__icon{
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.search__button{
+    margin-top: 2rem;
+    height: 5rem;
+    width: 10rem;
+    align-self: center;
+}
+
+.results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5rem;
+    padding: 3rem;
+    
+}
+@media only screen and (max-width: 37.5em) {
+    .results {
+      padding: 2rem;
+      
+    }
+}
+
+
+.card{
+    margin-bottom: 4rem;
+    width: 70%;
+    
+}
+
+@media only screen and (max-width: 37.5em) {
+    .card {
+      width: 100%;
+    }
+}
